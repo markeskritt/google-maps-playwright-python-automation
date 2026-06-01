@@ -4,8 +4,7 @@ from google_maps_page import GoogleMapsPage
 
 @pytest.fixture
 def maps_page(context):
-    context.grant_permissions(["geolocation"])
-    
+   
     page = context.new_page()
     
     # Initialize and return the Page Object Model

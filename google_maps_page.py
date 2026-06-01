@@ -10,11 +10,11 @@ class GoogleMapsPage:
 
     def navigate_using_coordinates(self, lat: float, lng: float):
         print(f"Navigating to coordinates: {lat}, {lng}...")
-        self.page.goto(f"https://www.google.com/maps/@{lat},{lng},15z")
+        self.page.goto(f"http://www.google.com/maps/@{lat},{lng},15z")
 
     def navigate_without_coordinates(self):
-        print("Navigating to maps.google.com...")
-        self.page.goto("https://maps.google.com")
+        print("Navigating to www.google.com/maps...")
+        self.page.goto("http://www.google.com/maps")
 
     def verify_page_load(self):
         expect(self.page).to_have_title("Google Maps")
