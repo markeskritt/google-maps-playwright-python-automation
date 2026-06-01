@@ -1,10 +1,10 @@
-# 🗺️ Google Maps Playwright Python Automation Framework
+#  Google Maps Playwright Python Automation Framework
 
 A modern UI test automation framework designed to validate critical search functionality on Google Maps. Built with a modern, high-performance Python and Playwright stack utilizing the Page Object Model (POM) pattern.
 
 ---
 
-## 🛠️ Tech Stack & Architecture
+##  Tech Stack & Architecture
 
 * **Language:** Python 3.12+
 * **Automation Engine:** Playwright 
@@ -14,7 +14,7 @@ A modern UI test automation framework designed to validate critical search funct
 
 ---
 
-## 🚀 Key Features
+##  Key Features
 
 * **Data-Driven Geographic Testing:** Supports dynamic location testing by injecting latitude and longitude coordinates directly into URL parameters. This bypasses fragile browser hardware geolocation permissions, ensuring deterministic, cloud-safe execution across any CI/CD pipeline.
 * **Robust Core Framework:** Zero explicit, flaky hardcoded pauses; leverages Playwright's native auto-waiting mechanisms and locator assertions.
@@ -24,7 +24,7 @@ A modern UI test automation framework designed to validate critical search funct
 
 ---
 
-## 📋 Prerequisites & Installation
+##  Prerequisites & Installation
 
 Ensure you have Python 3.12+ installed on your system.
 
@@ -45,19 +45,15 @@ Ensure you have Python 3.12+ installed on your system.
 
 ---
 
-## 🏃 Running the Tests
+##  Running the Tests
 
 To run the full end-to-end suite with live browser rendering:
 
     pytest --headed --slowmo=500
 
-## 📋 Test Suite Overview
+##  Test Suite Overview
 
 The suite currently consists of two distinct functional testing strategies to validate location-based behaviors on live production maps:
-
-* **`test_search_without_coordinates`**
-  * **Strategy:** Relies on the host machine's network IP location to establish a baseline.
-  * **Behavior:** Automatically searches for a restaurant relative to the user's local region.
   
 * **`test_search_with_coordinates`**
   * **Strategy:** Data-driven execution utilizing direct URL parameter injection.
@@ -65,6 +61,10 @@ The suite currently consists of two distinct functional testing strategies to va
     * `latitude = 43.7067`
     * `longitude = -79.3984`
   * **Advantage:** Enables completely deterministic, cloud-safe execution across any remote CI/CD environment.
+
+* **`test_search_without_coordinates`**
+  * **Strategy:** Relies on the local machine's network IP location to establish a baseline.
+  * **Behavior:** Automatically searches for a restaurant relative to the user's local region.
 
 ### Core Verification Criteria
 Both test variations strictly assert the following structural layers before passing:
@@ -74,7 +74,7 @@ Both test variations strictly assert the following structural layers before pass
 
 ---
 
-## 📊 Generating Allure Reports
+##  Generating Allure Reports
 
 To execute tests and capture data for reporting: 
 
@@ -88,7 +88,7 @@ To serve and view the interactive HTML Allure Report locally:
 
 ---
 
-## 🌐 Cross-Browser Testing
+##  Cross-Browser Testing
 
 This framework utilizes Playwright's native multi-engine architecture. Tests run in a highly isolated environment using pristine browser engines, completely separated from local browser histories, profiles, or cached data pollution.
 
@@ -116,7 +116,7 @@ Combine these native flags to fine-tune your local debugging sessions:
 
 ---
 
-## 🛠️ Tools & Frameworks Used (And Why)
+##  Tools & Frameworks Used (And Why)
 
 * **Python & Pytest:** Python offers a highly readable, expressive syntax that reduces boilerplate code in test scripts. Pytest was selected as the test runner for its powerful fixture model, native test discovery, and seamless execution scalability.
 * **Playwright:** Chosen over legacy solutions like Selenium due to its modern architecture. Playwright communicates directly with browser developer tools protocols, enabling built-in auto-waiting, faster execution speeds, and bulletproof stability with near-zero flaky tests.
@@ -124,7 +124,7 @@ Combine these native flags to fine-tune your local debugging sessions:
 
 ---
 
-## 📁 Test Structure Overview
+##  Test Structure Overview
 
 The project strictly follows the Page Object Model (POM) design pattern to isolate UI selectors from core test logic:
 
@@ -138,14 +138,13 @@ The project strictly follows the Page Object Model (POM) design pattern to isola
 
 ---
 
-## 🧠 Assumptions & Limitations
+##  Assumptions & Limitations
 
-* **OS Environment:** 
 * **OS Environment:** The current activation scripts provided in this documentation assume a local Windows environment (`.venv\Scripts\activate`). Mac/Linux users will need to run `source .venv/bin/activate`.
 
 ---
 
-## 🚀 Future Improvements 
+##  Future Improvements 
 
 If this framework was to be scaled into an enterprise-level regression suite, the following enhancements could be prioritised:
 

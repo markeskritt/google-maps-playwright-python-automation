@@ -34,7 +34,6 @@ class GoogleMapsPage:
     def has_category_in_results(self, category_keyword: str) -> bool:
         card_count = self.result_cards.count()
         print(f"Scanning {card_count} loaded cards for category keyword: '{category_keyword}'")
-        
         for i in range(card_count):
             card_text = self.result_cards.nth(i).inner_text()
             if category_keyword in card_text:
